@@ -1,0 +1,29 @@
+package entities;
+
+public class Triangulo {
+	public double altura;
+	public double largura;
+
+
+	public double area() {
+		
+		return (largura * altura) / 2;
+	}
+
+	public double perimetro() {
+		return largura + 2 * altura;
+	}
+	
+	public double diagonal() {
+		return Math.sqrt((altura *2) + (largura * 2));
+	}
+	
+	public String toString() {
+		return "AREA = "
+			+ area()
+			+ "PERIMETRO = "
+			+ perimetro()
+			+ "DIAGONAL = "
+			+ diagonal();
+	}
+}

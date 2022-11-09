@@ -1,0 +1,22 @@
+package curso_data_hora2;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Progam {
+
+	public static void main(String[] args) {
+
+		LocalDate d04 = LocalDate.parse("2022-11-12");
+		LocalDateTime d05 = LocalDateTime.parse("2022-11-12T13:30:00");
+		Instant d06 = Instant.parse("2022-11-12T13:30:00Z");
+		
+		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		
+		System.out.println("d04 = " + d04);
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package application;
+
+import java.util.Scanner;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Qunatas valores cada vetor terá? ");
+		int n = sc.nextInt();
+		
+		
+		sc.close();
+	}
+
+}

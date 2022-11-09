@@ -1,0 +1,14 @@
+package curso_array_alunos_aprovados;
+
+import java.util.Scanner;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		
+	}
+		
+		
+}
+
+

@@ -1,0 +1,20 @@
+package entities;
+
+public class Conta {
+	private int numeroConta;
+	private String titularConta;
+	private double saldo;
+	
+	
+	public Conta (int numeroConta, String titularConta) {
+		this.numeroConta = numeroConta;
+		this.titularConta = titularConta;
+	}
+
+	public String toString() {
+		return String.format("Conta %f, Titular: %s, Saldo: R$ %.2f", numeroConta, titularConta, saldo);
+	}
+	
+	
+	
+}

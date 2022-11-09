@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String nome;
+		int idade;
+		double altura;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		nome = sc.next();
+		idade = sc.nextInt();
+		altura = sc.nextDouble();
+		
+		System.out.println("Dados digitados: ");
+		System.out.println(nome);
+		System.out.println(idade);
+		System.out.println(altura);
+		
+		sc.close();
+	}
+
+}

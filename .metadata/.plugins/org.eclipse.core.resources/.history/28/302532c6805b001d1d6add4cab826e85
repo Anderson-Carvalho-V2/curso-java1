@@ -1,0 +1,36 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import entities.Funcionario;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<Funcionario> funcionarios = new ArrayList<>();
+		
+		System.out.print("Qunatos funcinários você vai cadastrar? ");
+		int n = sc.nextInt();
+		
+		for (int i=1; i<=n; i++) {
+			System.out.print("/nFuncionário #" + i + ":");
+			System.out.print("Id: ");
+			int id = sc.nextInt();
+			System.out.print("Nome: ");
+			sc.nextLine();
+			String nome = sc.nextLine();
+			System.out.print("Salário: ");
+			double salario = sc.nextDouble();
+			
+			Funcionario funcionario = new Funcionario(id, nome, salario);
+			
+			funcionarios.add(funcionario);
+		}
+		
+		sc.close();
+		
+	}
+}

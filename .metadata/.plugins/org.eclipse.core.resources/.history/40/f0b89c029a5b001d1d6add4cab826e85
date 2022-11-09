@@ -1,0 +1,19 @@
+package curso_matrizes;
+
+import java.util.Scanner;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite o tamanho da matriz: ");
+		int n = sc.nextInt();
+	
+		int[][] matriz = new int[n][n];
+		
+		
+		
+		sc.close();
+	}
+}

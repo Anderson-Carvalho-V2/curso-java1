@@ -1,0 +1,39 @@
+package curso_array_alunos_aprovados;
+
+import java.util.Scanner;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Qunatas valores cada vetor terá? ");
+		int n = sc.nextInt();
+		
+		Aluno[] alunos = new Aluno[n];
+		
+		for (int i = 0; i < n; i++) {
+			System.out.printf("Digite o nome, primeira e segunda nota do %da aluno\n", i+1);
+			String nAluno = sc.nextLine();
+			sc.nextLine();
+			double nota1 = sc.nextDouble();
+			double nota2 = sc.nextDouble();
+			alunos[i] = new Aluno(nAluno, nota1, nota2);
+		}
+		
+		
+		
+		System.out.println("Alunos aprovados:");
+		
+		System.out.println(alunos[0].getNome());
+		for (int i = 0; i < n; i++) {
+
+		}
+		
+		sc.close();
+	}
+
+}
+
+

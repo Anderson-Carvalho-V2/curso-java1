@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o código da peça");
+		double cod1 = sc.nextDouble();	
+		System.out.println("Digite a quantidade de peça1");
+		double qtd1 = sc.nextDouble();
+		System.out.println("Digite valor da peça1");
+		double valor1 = sc.nextDouble();
+
+		System.out.println("Digite o código do peça2");
+		double cod2 = sc.nextDouble();	
+		System.out.println("Digite a quantidade de peça2");
+		double qtd2 = sc.nextDouble();	
+		System.out.println("Digite valor da peça2");
+		double valor2 = sc.nextDouble();
+		
+		double valor = (qtd1 * valor1) + (qtd2 * valor2);
+		
+		System.out.printf("Valor: %.2f", valor);
+				
+	
+		sc.close();
+	}	
+
+}

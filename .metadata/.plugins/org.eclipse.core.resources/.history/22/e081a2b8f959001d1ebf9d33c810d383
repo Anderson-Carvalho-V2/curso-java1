@@ -1,0 +1,43 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+import entities.Product;
+
+public class Progam {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite os dados do produto: ");
+		System.out.print("Name: ");
+		String name = sc.nextLine();
+		System.out.print("Price: ");
+		double price = sc.nextDouble();		
+		
+		Product produto = new Product(name, price);
+		
+		System.out.println();
+		System.out.println("Dados do produto: " + produto);
+		
+		System.out.println();
+		System.out.print("Adicionar produtos ao estoque: ");
+		int quantity = sc.nextInt();
+		produto.addProductus(quantity);
+		
+		System.out.println();
+		System.out.print("Dados atualizados: " + produto);
+		
+		System.out.println();
+		System.out.print("Remover produtos do estoque: ");
+		quantity = sc.nextInt();
+		produto.removeProducts(quantity);
+		
+		System.out.println();
+		System.out.print("Dados atualizados: " + produto);
+		
+		sc.close();
+	}
+}

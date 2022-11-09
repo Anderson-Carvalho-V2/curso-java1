@@ -1,0 +1,33 @@
+package application;
+
+import java.util.Scanner;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+				
+		System.out.print("Quntos quartos serão alugados? ");
+		int n = sc.nextInt();
+		
+		Aluguel[] alugueis = new Aluguel[10];
+		
+		for (int i = 1; i < n; i++) {
+			System.out.println("Cód #: " + i);
+			System.out.print("Nome: ");
+			String nome = sc.nextLine();
+			sc.nextLine();
+			System.out.print("E-mail: ");
+			String email = sc.nextLine();
+			System.out.print("Quarto: ");
+;
+			
+
+		}
+		
+
+		
+		sc.close();
+	}
+
+}

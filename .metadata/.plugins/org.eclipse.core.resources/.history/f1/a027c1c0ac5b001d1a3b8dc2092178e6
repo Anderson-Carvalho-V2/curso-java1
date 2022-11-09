@@ -1,0 +1,15 @@
+package curso_data_hora;
+
+import java.time.LocalDate;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		
+		LocalDate d01 = LocalDate.now();
+		
+		System.out.println(d01);
+
+	}
+
+}

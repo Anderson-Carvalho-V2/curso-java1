@@ -1,0 +1,53 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		
+		List<String> list = new ArrayList<>();
+		
+		list.add("Maria");
+		list.add("Alex");
+		list.add("Bob");
+		list.add("Ana");
+		list.add(2, "Marco");
+		
+		System.out.println(list.size());
+		
+		for(String nome: list) {
+			System.out.println(nome);
+		}
+		System.err.println("--------------------");
+		
+		//list.remove(1);
+		//list.remove("Ana");
+		
+		list.removeIf(x -> x.charAt(0) == 'M'); //Remoção por predicato(Lambda)
+		
+		for(String nome: list) {
+			System.out.println(nome);
+		}
+		System.err.println("--------------------");
+		
+		System.out.println("Index of Bob: " + list.indexOf("Bob"));
+		System.out.println("Index of Marco: " + list.indexOf("Marco"));//Qunado o elemento procurado n existe na lista, é retornado o valor -1
+		System.err.println("--------------------");
+		
+		//Converte uma list para stream pra fazer uma função lambda. Depois converte o stream para lista novamente
+		List<String> rsult = list.stream().filter(x -> x.charAt(0) == 'A').toList();
+		
+		for(String nome: rsult) {
+			System.out.println(nome);
+		}
+		System.err.println("--------------------");
+	
+		String name = list.stream().filter(x -> x.charAt(0) == 'A').findFirst().orElse(null);
+		System.out.println(name);
+		
+		
+		
+	}
+}

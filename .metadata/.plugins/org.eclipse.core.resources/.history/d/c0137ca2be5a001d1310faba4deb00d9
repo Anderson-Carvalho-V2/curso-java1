@@ -1,0 +1,38 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Pessoa;
+
+public class Progam {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Qunatas pessoas serão cadastradas? ");
+		int n = sc.nextInt();
+		
+		Pessoa[] pessoa = new Pessoa[n];
+		
+		for (int i = 0; i < pessoa.length; i++) {
+			System.out.println("Dados da " + (i+1) + ":");
+			System.out.print("Nome: ");
+			String nome = sc.next();
+			System.out.print("Idade: ");
+			int idade = sc.nextInt();
+			System.out.print("Altura: ");
+			double altura = sc.nextDouble();	
+			
+			pessoa[i] = new Pessoa(nome, idade, altura);	
+			
+		}
+		
+		System.out.println(pessoa[2].toString());
+		
+		
+		
+		sc.close();
+	}
+
+}
